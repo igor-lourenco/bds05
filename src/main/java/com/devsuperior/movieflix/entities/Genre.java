@@ -52,6 +52,10 @@ public class Genre implements Serializable {
 	public List<Movie> getMovies() {
 		return movies;
 	}
+	
+	public void setMovies(List<Movie> movies) {
+		this.movies = movies;
+	}
 
 	@Override
 	public int hashCode() {

@@ -28,7 +28,7 @@ public class Movie implements Serializable {
 	private String synopsis;
 	
 	@OneToMany(mappedBy = "movie")
-	private List<Review> rewies = new ArrayList<>();
+	private List<Review> reviews = new ArrayList<>();
 	
 	@ManyToOne
 	@JoinColumn(name = "genre_id")
@@ -94,8 +94,16 @@ public class Movie implements Serializable {
 		this.synopsis = synopsis;
 	}
 
-	public List<Review> getRewies() {
-		return rewies;
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
+	public Genre getGenre() {
+		return genre;
+	}
+	
+	public void setGenre(Genre genre) {
+		this.genre = genre;
 	}
 
 	@Override
